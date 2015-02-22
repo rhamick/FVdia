@@ -15,28 +15,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle's fvdia theme, an example of how to make a Bootstrap theme
+ * Theme cerulean lib.
  *
- * DO NOT MODIFY THIS THEME!
- * COPY IT FIRST, THEN RENAME THE COPY AND MODIFY IT INSTEAD.
- *
- * For full information about creating Moodle themes, see:
- * http://docs.moodle.org/dev/Themes_2.0
- *
- * @package   theme_fvdia
- * @copyright 2013 Moodle, moodle.org
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    theme_fvdia
+ * @copyright  2014 Bas Brands
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-/**
- * Parses CSS before it is cached.
- *
- * This function can make alterations and replace patterns within the CSS.
- *
- * @param string $css The CSS
- * @param theme_config $theme The theme config object.
- * @return string The parsed CSS The parsed CSS.
- */
 function theme_fvdia_process_css($css, $theme) {
 
     // Set the background image for the logo.
@@ -54,21 +39,28 @@ function theme_fvdia_process_css($css, $theme) {
     return $css;
 }
 
-/**
- * Adds the logo to CSS.
- *
- * @param string $css The CSS.
- * @param string $logo The URL of the logo.
- * @return string The parsed CSS
- */
+
 function theme_fvdia_set_logo($css, $logo) {
-    $tag = '[[setting:logo]]';
+    $logotag = '[[setting:logo]]';
+    $logoheight = '[[logoheight]]';
+    $logowidth = '[[logowidth]]';
+    $logodisplay = '[[logodisplay]]';
+    $width = '0';
+    $height = '0';
+    $display = 'none';
     $replacement = $logo;
     if (is_null($replacement)) {
         $replacement = '';
+    } else {
+        $dimensions = getimagesize('http:'.$logo);
+        $width = $dimensions[0] . 'px';
+        $height = $dimensions[1] . 'px';
+        $display = 'block';
     }
-
-    $css = str_replace($tag, $replacement, $css);
+    $css = str_replace($logotag, $replacement, $css);
+    $css = str_replace($logoheight, $height, $css);
+    $css = str_replace($logowidth, $width, $css);
+    $css = str_replace($logodisplay, $display, $css);
 
     return $css;
 }
@@ -86,13 +78,9 @@ function theme_fvdia_set_logo($css, $logo) {
  * @return bool
  */
 function theme_fvdia_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
-    if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'logo') {
+    if ($context->contextlevel == CONTEXT_SYSTEM && ($filearea === 'logo')) {
         $theme = theme_config::load('fvdia');
-        // By default, theme files must be cache-able by both browsers and proxies.
-        if (!array_key_exists('cacheability', $options)) {
-            $options['cacheability'] = 'public';
-        }
-        return $theme->setting_file_serve('logo', $args, $forcedownload, $options);
+        return $theme->setting_file_serve($filearea, $args, $forcedownload, $options);
     } else {
         send_file_not_found();
     }
@@ -115,64 +103,4 @@ function theme_fvdia_set_customcss($css, $customcss) {
     $css = str_replace($tag, $replacement, $css);
 
     return $css;
-}
-
-/**
- * Returns an object containing HTML for the areas affected by settings.
- *
- * Do not add fvdia specific logic in here, child themes should be able to
- * rely on that function just by declaring settings with similar names.
- *
- * @param renderer_base $output Pass in $OUTPUT.
- * @param moodle_page $page Pass in $PAGE.
- * @return stdClass An object with the following properties:
- *      - navbarclass A CSS class to use on the navbar. By default ''.
- *      - heading HTML to use for the heading. A logo if one is selected or the default heading.
- *      - footnote HTML to use as a footnote. By default ''.
- */
-function theme_fvdia_get_html_for_settings(renderer_base $output, moodle_page $page) {
-    global $CFG;
-    $return = new stdClass;
-
-    $return->navbarclass = '';
-    if (!empty($page->theme->settings->invert)) {
-        $return->navbarclass .= ' navbar-inverse';
-    }
-
-    if (!empty($page->theme->settings->logo)) {
-        $return->heading = html_writer::link($CFG->wwwroot, '', array('title' => get_string('home'), 'class' => 'logo'));
-    } else {
-        $return->heading = $output->page_heading();
-    }
-
-    $return->footnote = '';
-    if (!empty($page->theme->settings->footnote)) {
-        $return->footnote = '<div class="footnote text-center">'.format_text($page->theme->settings->footnote).'</div>';
-    }
-
-    return $return;
-}
-
-/**
- * All theme functions should start with theme_fvdia_
- * @deprecated since 2.5.1
- */
-function fvdia_process_css() {
-    throw new coding_exception('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__);
-}
-
-/**
- * All theme functions should start with theme_fvdia_
- * @deprecated since 2.5.1
- */
-function fvdia_set_logo() {
-    throw new coding_exception('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__);
-}
-
-/**
- * All theme functions should start with theme_fvdia_
- * @deprecated since 2.5.1
- */
-function fvdia_set_customcss() {
-    throw new coding_exception('Please call theme_'.__FUNCTION__.' instead of '.__FUNCTION__);
 }

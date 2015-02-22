@@ -15,24 +15,20 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle's Clean theme, an example of how to make a Bootstrap theme
- *
- * DO NOT MODIFY THIS THEME!
- * COPY IT FIRST, THEN RENAME THE COPY AND MODIFY IT INSTEAD.
- *
- * For full information about creating Moodle themes, see:
- * http://docs.moodle.org/dev/Themes_2.0
+ * Theme More version file.
  *
  * @package    theme_fvdia
- * @copyright  2015 RW
+ * @copyright  2014 Bas Brands
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2015022000;
-$plugin->requires  = 2014110400;
+$plugin->version   = 2015022101;
+$plugin->requires  = 2014051200;
+$plugin->release  = 2014051300;
+$plugin->maturity  = MATURITY_BETA;
 $plugin->component = 'theme_fvdia';
 $plugin->dependencies = array(
-    'theme_rwbootstrapbase'  => 2015022100,
+    'theme_bootstrap'  => 2014051300
 );

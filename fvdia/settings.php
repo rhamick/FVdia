@@ -15,34 +15,19 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle's Clean theme, an example of how to make a Bootstrap theme
+ * Theme More version file.
  *
- * DO NOT MODIFY THIS THEME!
- * COPY IT FIRST, THEN RENAME THE COPY AND MODIFY IT INSTEAD.
- *
- * For full information about creating Moodle themes, see:
- * http://docs.moodle.org/dev/Themes_2.0
- *
- * @package   theme_fvdia
- * @copyright 2015 RW
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    theme_fvdia
+ * @copyright  2014 Bas Brands
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
 defined('MOODLE_INTERNAL') || die;
 
 if ($ADMIN->fulltree) {
 
-    // Invert Navbar to dark background.
-    $name = 'theme_fvdia/invert';
-    $title = get_string('invert', 'theme_fvdia');
-    $description = get_string('invertdesc', 'theme_fvdia');
-    $setting = new admin_setting_configcheckbox($name, $title, $description, 0);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $settings->add($setting);
-
     // Logo file setting.
     $name = 'theme_fvdia/logo';
-    $title = get_string('logo','theme_fvdia');
+    $title = get_string('logo', 'theme_fvdia');
     $description = get_string('logodesc', 'theme_fvdia');
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'logo');
     $setting->set_updatedcallback('theme_reset_all_caches');
@@ -57,12 +42,4 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $settings->add($setting);
 
-    // Footnote setting.
-    $name = 'theme_fvdia/footnote';
-    $title = get_string('footnote', 'theme_fvdia');
-    $description = get_string('footnotedesc', 'theme_fvdia');
-    $default = '';
-    $setting = new admin_setting_confightmleditor($name, $title, $description, $default);
-    $setting->set_updatedcallback('theme_reset_all_caches');
-    $settings->add($setting);
 }

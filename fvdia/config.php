@@ -15,30 +15,22 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Moodle's Clean theme, an example of how to make a Bootstrap theme
+ * Theme More config file.
  *
- * DO NOT MODIFY THIS THEME!
- * COPY IT FIRST, THEN RENAME THE COPY AND MODIFY IT INSTEAD.
- *
- * For full information about creating Moodle themes, see:
- * http://docs.moodle.org/dev/Themes_2.0
- *
- * @package   theme_clean
- * @copyright 2013 Moodle, moodle.org
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * @package    theme_fvdia
+ * @copyright  2015 RW
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 $THEME->name = 'fvdia';
+$THEME->parents = array('bootstrap');
 
-/////////////////////////////////
-// The only thing you need to change in this file when copying it to
-// create a new theme is the name above. You also need to change the name
-// in version.php and lang/en/theme_clean.php as well.
-//////////////////////////////////
-//
 $THEME->doctype = 'html5';
-$THEME->parents = array('rwbootstrapbase');
 $THEME->sheets = array('custom');
+$THEME->lessfile = 'fvdia';
+$THEME->parents_exclude_sheets = array('bootstrap' => array('moodle'));
+$THEME->lessvariablescallback = 'theme_fvdia_less_variables';
+$THEME->extralesscallback = 'theme_fvdia_extra_less';
 $THEME->supportscssoptimisation = false;
 $THEME->yuicssmodules = array();
 $THEME->enable_dock = true;
@@ -46,8 +38,3 @@ $THEME->editor_sheets = array();
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 $THEME->csspostprocess = 'theme_fvdia_process_css';
-
-$THEME->blockrtlmanipulations = array(
-    'side-pre' => 'side-post',
-    'side-post' => 'side-pre'
-);
