@@ -1,0 +1,7 @@
+Entrar a linux:
+
+	vagrant ssh
+
+Reiniciar el webserver:
+
+	sudo service apache2 restart	 

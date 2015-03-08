@@ -14,9 +14,9 @@
 @gray-lighter:           lighten(#000, 93.5%); // #eee
 
 //@brand-primary:         #2FA4E7;
-@brand-primary:         #000;
+@brand-primary:         #d6251d;
 @brand-success:         #73A839;
-@brand-info:            #033C73;
+@brand-info:            #d6251d;
 @brand-warning:         #DD5600;
 @brand-danger:          #C71C22;
 
@@ -40,7 +40,10 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-path:          "../fonts/";
+@font-name:          "BPreplayExtended";
+
+@font-family-sans-serif:  "BPreplayExtended", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -50,7 +53,7 @@
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
+@font-size-h1:            floor((@font-size-base * 1.4)); // ~36px
 @font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
 @font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
 @font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
@@ -66,7 +69,7 @@
 @headings-font-family:    @font-family-base;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
-@headings-color:          #317EAC;
+@headings-color:          #d6251d;
 
 
 //-- Iconography
@@ -96,9 +99,9 @@
 @line-height-large:         1.33;
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        0;
+@border-radius-large:       0;
+@border-radius-small:       0;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
