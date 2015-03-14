@@ -2,36 +2,72 @@
 // Bootswatch
 // -----------------------------------------------------
 
+
+
+// Navbar =====================================================================
+
+  .navbar{
+    border: none;
+    margin-bottom: 0;
+    border-radius: 0;
+
+    .navbar-brand{
+      background: url("@{sprite-path}");
+      padding-top: 25px;
+      letter-spacing: 0.8px;
+    }
+
+    .container-fluid{
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    .navbar-nav>li>a{
+      padding-top: 25px;
+      padding-bottom: 20px;
+      font-size: 12px;
+    }
+  }
+  
+  .navbar-inverse {
+    #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
+    filter: none;
+    border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
+  }
+
+  .head_img{
+    height: 150px;
+    background-color: #fff;
+  }
+
+  .moodleheader{
+    display: none;
+  }
+
+  #page-navbar{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e4e4e4;
+  }
+
+
+
+
+// Buttons ====================================================================
+
 .btn-shadow(@color) {
   #gradient > .vertical-three-colors(lighten(@color, 8%), @color, 60%, darken(@color, 4%));
   filter: none;
   border-bottom: 1px solid darken(@color, 10%);
 }
 
-// Navbar =====================================================================
-
-.navbar {
-  .btn-shadow(@navbar-default-bg);
-  filter: none;
-  .box-shadow(0 1px 10px rgba(0, 0, 0, 0.1));
-
-  .navbar-nav > li > a,
-  &-brand {
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-  }
-}
-
-.navbar-inverse {
-  #gradient > .vertical-three-colors(lighten(@navbar-inverse-bg, 8%), lighten(@navbar-inverse-bg, 4%), 60%, darken(@navbar-inverse-bg, 2%));
-  filter: none;
-  border-bottom: 1px solid darken(@navbar-inverse-bg, 10%);
-}
-
-// Buttons ====================================================================
-
 .btn {
 
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 
   .caret {
     border-top-color: #fff;
@@ -75,6 +111,14 @@
   .btn-shadow(@btn-danger-bg);
 }
 
+input{
+  font-size: 10px !important;
+}
+
+.singlebutton div{
+  margin-left: 0;
+}
+
 // Typography =================================================================
 
 a{
@@ -87,15 +131,72 @@ p{
   font-size: 12px;
 }
 
+h1, .h1, h2, .h2, h3, .h3{
+  margin-top: 0;
+}
+
+h2{
+  font-size: 25px;
+}
+
 // Tables =====================================================================
+
+tbody{
+  font-family: arial;
+}
 
 // Forms ======================================================================
 
 // Navs =======================================================================
 
+.breadcrumb{
+  background-color: transparent;
+  padding-left: 0;
+  font-size: 12px;
+  padding-top: 11px !important;
+}
+
 .breadcrumb li:before{
   font-family: "Helvetica";
 }
+
+.breadcrumb li:first-child a{
+  color: #535252;
+}
+
+.breadcrumb a{
+  color: #535252;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+
+.breadcrumb>li+li:before{ 
+  content: "\203A";
+  color: #68660b;
+}
+
+#page-navbar{
+    margin-top: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+
+  .breadcrumb-nav{
+    margin-bottom: 0;
+  }
+
+  .btn-default, input{
+      padding: 6px;
+      padding-left: 12px;
+      padding-right: 12px;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid #E4E4E4;
+      color: #68660b;
+      font-size: 10px;
+  }
+}
+
+
 
 // Indicators =================================================================
 
@@ -115,10 +216,44 @@ p{
   }
 }
 
+#region-main{
+  padding-left: 10px;
+}
+
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand{
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+#page-content{
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 30px;
+}
+
+
+
 // Aside
 
-aside{
+.panel-default, .block, .forumpost{
+  border: 1px solid #F7F4F4;
+  margin-bottom: 10px;
+}
 
+.block{
+
+  .header{
+    background: transparent;
+
+    h2{
+      font-size: 14px;
+    }
+  }
 }
 
 
