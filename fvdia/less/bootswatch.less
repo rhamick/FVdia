@@ -2,7 +2,19 @@
 // Bootswatch
 // -----------------------------------------------------
 
+label{
+  margin-right: 10px !important;
+}
 
+blockquote{
+  margin-left: 0 !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  padding-left: 10px !important;
+  font-size: 16px !important;
+}
+
+input:focus {outline:none !important;}
 
 // Navbar =====================================================================
 
@@ -51,9 +63,6 @@
     margin-bottom: 15px;
     border-bottom: 1px solid #e4e4e4;
   }
-
-
-
 
 // Buttons ====================================================================
 
@@ -113,6 +122,11 @@
 
 input{
   font-size: 10px !important;
+  background-image: #d6251d !important;
+  background-image: none !important;
+  letter-spacing: 1.5px;
+  font-size: 12px !important;
+  font-weight: bold;
 }
 
 .singlebutton div{
@@ -139,20 +153,63 @@ h2{
   font-size: 25px;
 }
 
+.minicalendar h3{
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
 // Tables =====================================================================
 
 tbody{
   font-family: arial;
 }
 
+.current{
+  font-family: "BPreplayExtended";
+}
+
+table#admindeviceselector{
+  margin-top: 5px;
+
+  h3{
+    font-size: 20px;
+  }
+
+  tr{
+    background-color: #fff;
+  }
+}
+
+.generaltable{
+
+  thead{
+    border-top: 1px solid #e4e4e4;
+  }
+
+  .r1{
+    background-color: #fafafa;
+  }
+}
+
 // Forms ======================================================================
+
+.fcontainer, .content{
+    font-family: "Arial" !important;
+}
+
+// Login ======================================================================
+
+.loginbox .loginform .form-input input[type="text"], .loginbox .loginform .form-input input[type="password"]{
+  font-family: "Arial";
+}
 
 // Navs =======================================================================
 
 .breadcrumb{
   background-color: transparent;
   padding-left: 0;
-  font-size: 12px;
+  font-size: 14px;
   padding-top: 11px !important;
 }
 
@@ -185,14 +242,16 @@ tbody{
   }
 
   .btn-default, input{
-      padding: 6px;
-      padding-left: 12px;
-      padding-right: 12px;
-      background-color: transparent;
-      background-image: none;
-      border: 1px solid #E4E4E4;
-      color: #68660b;
-      font-size: 10px;
+    padding: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid #E2E2E2;
+    color: #666666;
+    font-size: 10px !important;
+    letter-spacing: 1.5px;
+    font-weight: bold;
   }
 }
 
@@ -236,10 +295,6 @@ tbody{
   margin-top: 30px;
 }
 
-.content.panel-body{
-  text-align: left;
-}
-
 
 
 // Aside
@@ -253,13 +308,89 @@ tbody{
 
   .header{
     background: transparent;
+    padding-bottom: 5px;
 
     h2{
-      font-size: 14px;
+      font-size: 13.5px;
     }
   }
 }
 
+.panel-default, .block, .forumpost, .block, .forumpost{
+  padding: 10px;
+}
+
+.title{
+  h2{
+    color: #b92019 !important;
+  }
+}
+
+.content {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 6px;
+    padding-right: 0;
+
+    .footer{
+    padding-top: 0 !important;
+    }
+ }
+
+ .initialbar{
+    margin-bottom: 10px !important;
+ }
+
+ .userlist{
+
+    select{
+      height: 34px;
+    }
+
+  .rolesform{
+    margin-bottom: 10px;
+  }   
+}
+
+#tag-search-box{
+  text-align: left;
+}
+
+.calendar-controls{
+  font-family: "Arial";
+}
+
+.calendar_filters{
+  text-align: left;
+}
+
+.cal_courses_flt{
+  width: auto;
+  float: left;
+
+  label{
+    float: left;
+  }
+}
+
+.minicalendar{
+  h2{
+    font-size: 20px;
+  }
+}
+
+.box.message .contactselector{
+  padding: 20px;
+}
+
+.panel-body{
+  text-align: left;
+  font-size: 14px;
+}
+
+.panel-heading{
+  background-color: #fff !important;
+}
 
 
 
