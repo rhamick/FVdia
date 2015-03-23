@@ -22,6 +22,45 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+
+function bootstrap_fvdia_grid($hassidepre, $hassidepost) {
+
+    if ($hassidepre && $hassidepost) {
+        $regions = array('content' => 'col-sm-6 col-sm-push-3 col-lg-6 col-lg-push-3');
+        $regions['pre'] = 'col-sm-3 col-sm-pull-6 col-lg-3 col-lg-pull-6';
+        $regions['post'] = 'col-sm-3 col-lg-3';
+    } else if ($hassidepre && !$hassidepost) {
+        $regions = array('content' => 'col-sm-9 col-sm-push-3 col-lg-9 col-lg-push-3');
+        $regions['pre'] = 'col-sm-3 col-sm-pull-9 col-lg-3 col-lg-pull-9';
+        $regions['post'] = 'emtpy';
+    } else if (!$hassidepre && $hassidepost) {
+        $regions = array('content' => 'col-sm-9 col-lg-9');
+        $regions['pre'] = 'empty';
+        $regions['post'] = 'col-sm-3 col-lg-3';
+    } else if (!$hassidepre && !$hassidepost) {
+        $regions = array('content' => 'col-md-12');
+        $regions['pre'] = 'empty';
+        $regions['post'] = 'empty';
+    }
+    
+    if ('rtl' === get_string('thisdirection', 'langconfig')) {
+        if ($hassidepre && $hassidepost) {
+            $regions['pre'] = 'col-sm-3  col-sm-push-3 col-lg-3 col-lg-push-3';
+            $regions['post'] = 'col-sm-3 col-sm-pull-9 col-lg-3 col-lg-pull-9';
+        } else if ($hassidepre && !$hassidepost) {
+            $regions = array('content' => 'col-sm-9 col-lg-9');
+            $regions['pre'] = 'col-sm-3 col-lg-3';
+            $regions['post'] = 'empty';
+        } else if (!$hassidepre && $hassidepost) {
+            $regions = array('content' => 'col-sm-9 col-sm-push-3 col-lg-9 col-lg-push-3');
+            $regions['pre'] = 'empty';
+            $regions['post'] = 'col-sm-3 col-sm-pull-9 col-lg-3 col-lg-pull-9';
+        }
+    }
+    return $regions;
+}
+
+
 function theme_fvdia_process_css($css, $theme) {
 
     // Set the background image for the logo.
@@ -104,3 +143,6 @@ function theme_fvdia_set_customcss($css, $customcss) {
 
     return $css;
 }
+
+
+

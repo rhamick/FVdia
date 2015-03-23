@@ -16,6 +16,14 @@ a.logo {
     float: right;
 }
 
+/* 
+    Boton que permite acoplar la columna a la izquierda 
+    Deshabilitado
+*/
+.block_action{
+    display:none;
+}
+
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
