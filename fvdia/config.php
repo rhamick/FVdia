@@ -24,7 +24,6 @@
 
 $THEME->name = 'fvdia';
 $THEME->parents = array('bootstrap');
-
 $THEME->doctype = 'html5';
 $THEME->sheets = array('custom');
 $THEME->lessfile = 'fvdia';
