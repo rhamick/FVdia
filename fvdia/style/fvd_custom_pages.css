@@ -1,8 +1,22 @@
 /* Front page */
 
-#frontpage-history-course-list{
-	background: #ccc;
+#fvd-frontpage-summary{
+	margin:15px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 2px;	
+	background: #fff;
 }
 
+#fvd-frontpage-history-course-list{
+	margin-top: 15px;
+	padding: 15px;
+}
+#fvd-frontpage-history-course-list h1{
+
+}
+#fvd-frontpage-history-course-list table{
+
+}
 
 /* Catalog page */
