@@ -25,7 +25,10 @@
 $THEME->name = 'fvdia';
 $THEME->parents = array('bootstrap');
 $THEME->doctype = 'html5';
-$THEME->sheets = array('custom');
+$THEME->sheets = array(
+	                   'custom',
+	                   'fvd_custom_pages',
+	                   );
 $THEME->lessfile = 'fvdia';
 $THEME->parents_exclude_sheets = array('bootstrap' => array('moodle'));
 $THEME->lessvariablescallback = 'theme_fvdia_less_variables';

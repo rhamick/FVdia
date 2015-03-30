@@ -144,5 +144,9 @@ function theme_fvdia_set_customcss($css, $customcss) {
     return $css;
 }
 
+function theme_fvdia_page_init(moodle_page $page) {
+   $page->requires->jquery();
+   $page->requires->jquery_plugin('collapse', 'theme_fvdia');
+}
 
 
