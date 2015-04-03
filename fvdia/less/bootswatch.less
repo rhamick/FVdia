@@ -26,11 +26,13 @@ table{
     border: none;
     margin-bottom: 0;
     border-radius: 0;
+    height: 235px;
 
     .navbar-brand{
       background: url("@{sprite-path}");
-      padding-top: 25px;
+      padding-top: 10px;
       letter-spacing: 0.8px;
+      font-size: 12px;
     }
 
     .container-fluid{
@@ -39,8 +41,8 @@ table{
     }
 
     .navbar-nav>li>a{
-      padding-top: 25px;
-      padding-bottom: 20px;
+      padding-top: 10px;
+      padding-bottom: 7px;
       font-size: 12px;
     }
   }
@@ -63,11 +65,14 @@ table{
   }
 
   #page-navbar{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e4e4e4;
+    padding-top: 0;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 1px solid #ededed;
   }
 
 // Buttons ====================================================================
@@ -216,8 +221,8 @@ table#admindeviceselector{
 .breadcrumb{
   background-color: transparent;
   padding-left: 0;
-  font-size: 14px;
-  padding-top: 11px !important;
+  font-size: 13px;
+  padding-top: 8px !important;
 }
 
 .breadcrumb li:before{
@@ -240,9 +245,9 @@ table#admindeviceselector{
 }
 
 #page-navbar{
-    margin-top: 20px;
-    padding-bottom: 10px;
-    margin-bottom: 0;
+  margin-top: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 0;
 
   .breadcrumb-nav{
     margin-bottom: 0;
@@ -271,6 +276,13 @@ table#admindeviceselector{
 // Containers =================================================================
 
 // Aside
+
+aside{
+  background-color: rgba(252, 251, 251, 0.45);
+  padding-top: 15px;
+  border-right: 1px solid #ededed;
+  border-left: 1px solid #ededed;
+}
 
 .block_navigation, #yui3-css-stamp .block_navigation, .block_fvdiamenu{
   margin-top: 37px;
@@ -301,7 +313,7 @@ table#admindeviceselector{
 }
 
 #region-main{
-  padding-left: 10px;
+  padding: 20px;
 }
 
 .container-fluid{
@@ -312,12 +324,16 @@ table#admindeviceselector{
 .navbar-brand{
   text-transform: uppercase;
   font-size: 16px;
+  height: auto;
+  padding-bottom: 0;
+}
+#page-site-index #block-region-side-pre{
+  display: none;
 }
 
 #page-content{
   margin-left: 0;
   margin-right: 0;
-  margin-top: 30px;
 }
 
 .admin .block_navigation{
@@ -483,6 +499,32 @@ table#admindeviceselector{
 #quiz-time-left{
   font-size: 30px;
   text-align: left;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav>.open>a:focus {
+  background-color: rgba(169, 29, 23, 0.3);
+  color: #fff;
+}
+
+#page-header{
+  background-color: rgba(252, 251, 251, 0.45);
+}
+
+#page-footer{
+  margin-top: 0;
+  border-top: none;
+  background-color: #d6251d;
+  color: #fff;
+
+  a{
+    color: #fff;
+  }
+
+  .block .header h2{
+    text-transform: uppercase !important;
+    color: #d6251d;
+    font-size: 14px;
+  }
 }
 
 
