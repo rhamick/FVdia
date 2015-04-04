@@ -16,9 +16,34 @@ blockquote{
 
 input:focus {outline:none !important;}
 
+.block_fvdiamenu.itemcard p a.btn{
+  font-weight: normal;
+  text-align: center;
+  font-family: "BPreplayExtended";
+  text-transform: uppercase !important;
+  background-image: linear-gradient(#ffffff, #fff 60%, #fff) !important;
+  font-size: 10px !important;
+  padding: 6px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
 table{
   font-family: Arial;
 }
+
+.block .header h2{
+    text-transform: uppercase !important;
+    color: #d6251d !important;
+    font-size: 14px;
+  }
+
+aside h2, aside h5{
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 7px;
+  padding-left: 0;
+  padding-right: 0;
+}  
 
 // Navbar =====================================================================
 
@@ -282,22 +307,10 @@ aside{
   padding-top: 15px;
   border-right: 1px solid #ededed;
   border-left: 1px solid #ededed;
-}
 
-.block_navigation, #yui3-css-stamp .block_navigation, .block_fvdiamenu{
-  margin-top: 37px;
-}
-
-#page-blog-index .block_navigation{
-  margin-top: 92px;
-}
-
-.format-site .block_navigation{
-  margin-top: 18px;
-}
-
-#page-my-index .block_navigation, .format-topics, #page-admin-theme-index .block_fvdiamenu, #page-user-profile .block_fvdiamenu {
-  margin-top: 0;
+  ul{
+    line-height: 2;
+  }
 }
 
 .panel-primary,
@@ -501,7 +514,7 @@ aside{
   text-align: left;
 }
 
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav>.open>a:focus {
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav>li>a:focus {
   background-color: rgba(169, 29, 23, 0.3);
   color: #fff;
 }
@@ -518,12 +531,6 @@ aside{
 
   a{
     color: #fff;
-  }
-
-  .block .header h2{
-    text-transform: uppercase !important;
-    color: #d6251d;
-    font-size: 14px;
   }
 }
 
