@@ -4,6 +4,7 @@
 
 label{
   margin-right: 10px !important;
+  font-weight: 100 !important;
 }
 
 blockquote{
@@ -43,7 +44,19 @@ aside h2, aside h5{
   padding-bottom: 7px;
   padding-left: 0;
   padding-right: 0;
-}  
+}
+
+.content h3{
+  padding-top: 20px;
+}
+
+.mform fieldset.collapsible legend a.fheader, .mform fieldset.collapsed legend a.fheader{
+  margin-left: 0;
+}
+
+.legend a{
+  font-size: 18px !important;
+} 
 
 // Navbar =====================================================================
 
@@ -303,7 +316,7 @@ table#admindeviceselector{
 // Aside
 
 aside{
-  background-color: rgba(252, 251, 251, 0.45);
+  background-color: rgba(249, 248, 248, 1);
   padding-top: 15px;
   border-right: 1px solid #ededed;
   border-left: 1px solid #ededed;
@@ -340,7 +353,7 @@ aside{
   height: auto;
   padding-bottom: 0;
 }
-#page-site-index #block-region-side-pre{
+#page-course-view-topics #block-region-side-pre, #page-site-index #block-region-side-pre, #page-fvd-catalogo #block-region-side-pre{
   display: none;
 }
 
@@ -532,6 +545,14 @@ aside{
   a{
     color: #fff;
   }
+}
+
+.course-content ul li.section.main{
+  border-bottom: 1px solid #ededed;
+}
+
+.activityinstance{
+  padding-bottom: 10px;
 }
 
 
