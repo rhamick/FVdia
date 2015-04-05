@@ -2,6 +2,14 @@
 // Bootswatch
 // -----------------------------------------------------
 
+html{
+  background-color: #f2f2f2;
+}
+
+body{
+  max-width: 1280px;
+}
+
 label{
   margin-right: 10px !important;
   font-weight: 100 !important;
@@ -50,6 +58,10 @@ aside h2, aside h5{
   padding-right: 0;
 }
 
+aside p{
+  margin-bottom: 30px;
+}
+
 .content h3{
   padding-top: 20px;
 }
@@ -71,13 +83,10 @@ aside h2, aside h5{
   border: none !important;
   padding-top: 9px;
 }
-.block_fvdiamenu.itemcard p a.btn:hover{
-  box-shadow: 0px 4px 0px #921510 !important;
-} 
 
-#region-main input[type="submit"]:hover{
-  background-color: #f5f5f5 !important;
-} 
+.block_fvdiamenu.itemcard p a.btn:hover, .fsubmit input[type="submit"]:hover{
+  box-shadow: 0px 4px 0px #921510 !important;
+}  
 
 // Navbar =====================================================================
 
@@ -384,7 +393,10 @@ aside{
     height: auto;
     padding-bottom: 0;
   }
-  #page-course-view-topics #block-region-side-pre, #page-site-index #block-region-side-pre, #page-fvd-catalogo #block-region-side-pre, #page-enrol-index #block-region-side-pre{
+  #page-course-view-topics #block-region-side-pre, #page-site-index #block-region-side-pre,
+  #page-fvd-catalogo #block-region-side-pre, #page-enrol-index #block-region-side-pre,
+  #page-mod-scorm-view #block-region-side-pre, #page-mod-scorm-view #block-region-side-pre,
+  #page-mod-quiz-view #block-region-side-pre, #page-course-index-category #block-region-side-pre{
     display: none;
   }
 
@@ -606,6 +618,42 @@ aside{
   margin-top: 20px !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.groupdisplay h3, #region-main h2{
+  margin-top: 20px;
+}
+
+#page-mod-quiz-attempt .navbar{
+  height: 40px;
+}
+
+#page-mod-quiz-attempt aside{
+  border-right: none;
+}
+
+.multichoice .content{
+  border-bottom: 1px solid #ededed;
+}
+
+#page-mod-quiz-attempt aside{
+  padding-top: 0;
+}
+
+#mod_quiz_navblock.block_fake{
+  margin-top: 20px !important;
+}
+
+#page-mod-quiz-attempt .MsoNormal{
+  margin-left: 0 !important;
+}
+
+.singlebutton input{
+  margin-left: 0;
+}
+
+.summary p{
+  font-size: 14px;
 }
 
 
