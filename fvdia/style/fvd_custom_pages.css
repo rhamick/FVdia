@@ -11,16 +11,7 @@
 	margin-top: 15px;
 	padding: 15px;
 }
-#fvd-frontpage-history-course-list h1{
-
-}
-#fvd-frontpage-history-course-list table{
-
-}
-#fvd-frontpage-history-course-list table p{
-	margin-bottom: 0px;
-}
-#fvd-frontpage-history-course-list table p span{
+#fvd-frontpage-history-course-list h6 span{
 	min-width: 85px;
   	display: inline-block;
 }
