@@ -14,7 +14,6 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
-
 $hassidepre = $PAGE->blocks->region_has_content('side-pre', $OUTPUT);
 $hassidepost = $PAGE->blocks->region_has_content('side-post', $OUTPUT);
 
@@ -43,6 +42,7 @@ echo $OUTPUT->doctype() ?>
 
 <nav role="navigation" class="navbar navbar-default">
     <div class="head_img">
+        <!-- banner img set in css -->
     </div>    
     <div class="container-fluid">
         <div class="navbar-header">
@@ -112,10 +112,17 @@ echo $OUTPUT->doctype() ?>
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
         <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
         <?php
-        echo $OUTPUT->login_info();
-        echo $OUTPUT->home_link();
-        echo $OUTPUT->standard_footer_html();
+        echo $OUTPUT->login_info();      
+        #echo $OUTPUT->home_link();  // moodle logo
         ?>
+
+        <div class="sitelink">
+            <a title="Formación Virtual Día" href="<?php echo $CFG->wwwroot ?>">
+                <img src="<?php echo $CFG->wwwroot ?>/theme/fvdia/pix/logo_dia_white_xs.png" alt="Dia Logo">
+            </a>
+        </div>
+        
+        <?php echo $OUTPUT->standard_footer_html(); ?>
     </footer>
 
     <?php echo $OUTPUT->standard_end_of_body_html() ?>

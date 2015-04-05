@@ -24,6 +24,11 @@ a.logo {
     display:none;
 }
 
+/* Footer img logo */
+.sitelink a img{
+    margin-top: 15px;
+}
+
 /* Custom CSS Settings
 -------------------------*/
 [[setting:customcss]]
