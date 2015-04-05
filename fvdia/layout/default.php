@@ -56,7 +56,7 @@ echo $OUTPUT->doctype() ?>
 
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#moodle-navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#moodle-navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
