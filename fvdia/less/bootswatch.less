@@ -15,6 +15,10 @@ blockquote{
   font-size: 16px !important;
 }
 
+input{
+  font-weight: 100 !important;
+}
+
 input:focus {outline:none !important;}
 
 .block_fvdiamenu.itemcard p a.btn{
@@ -22,7 +26,7 @@ input:focus {outline:none !important;}
   text-align: center;
   font-family: "BPreplayExtended";
   text-transform: uppercase !important;
-  background-image: linear-gradient(#ffffff, #fff 60%, #fff) !important;
+  background-image: linear-gradient(#b92019 , #b92019  60%, #b92019) !important;
   font-size: 10px !important;
   padding: 6px;
   padding-left: 12px;
@@ -56,6 +60,23 @@ aside h2, aside h5{
 
 .legend a{
   font-size: 18px !important;
+}
+
+.block_fvdiamenu.itemcard p a.btn, input.form-submit, input#id_submitbutton, input#id_submitbutton2, .path-admin .buttons input[type="submit"], td.submit input{
+  background-color: #b92019 !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0px 3px 0px #8F140D;
+  border-image: none !important;
+  border: none !important;
+  padding-top: 9px;
+}
+.block_fvdiamenu.itemcard p a.btn:hover{
+  box-shadow: 0px 4px 0px #921510 !important;
+} 
+
+#region-main input[type="submit"]:hover{
+  background-color: #f5f5f5 !important;
 } 
 
 // Navbar =====================================================================
@@ -291,11 +312,11 @@ table#admindeviceselector{
     margin-bottom: 0;
   }
 
-  .btn-default, input{
+  .btn-default, input, .btn-default button{
     padding: 6px;
     padding-left: 12px;
     padding-right: 12px;
-    background-color: transparent;
+    background-color: #ffffff;
     background-image: none;
     border: 1px solid #E2E2E2;
     color: #666666;
@@ -353,8 +374,9 @@ aside{
   height: auto;
   padding-bottom: 0;
 }
-#page-course-view-topics #block-region-side-pre, #page-site-index #block-region-side-pre, #page-fvd-catalogo #block-region-side-pre{
+#page-course-view-topics #block-region-side-pre, #page-site-index #block-region-side-pre, #page-fvd-catalogo #block-region-side-pre, #page-enrol-index #block-region-side-pre{
   display: none;
+}
 }
 
 #page-content{
@@ -553,6 +575,28 @@ aside{
 
 .activityinstance{
   padding-bottom: 10px;
+}
+
+#fvd-frontpage-summary{
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 25px !important;
+}
+
+#fvd-frontpage-summary p{
+  font-size: 14px;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 30px !important;
+}
+
+#fvd-frontpage-history-course-list{
+  padding-top: 0 !important;
+  margin-top: 20px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 
