@@ -41,9 +41,19 @@ echo $OUTPUT->doctype() ?>
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <nav role="navigation" class="navbar navbar-default">
-    <div class="head_img">
-        <!-- banner img set in css -->
-    </div>    
+
+
+    <?php if(theme_fvdia_isUserCohortPropio($USER->id)): ?>
+        <div class="head_img propio">
+            <!-- banner img set in bootswatch.css -->
+            <a href="<?php echo $CFG->wwwroot; ?>/apps/pap2/auth.php"></a>
+        </div> 
+    <?php else: ?>
+        <div class="head_img nopropio">
+            <!-- banner img set in bootswatch.css -->
+        </div>     
+    <?php endif; ?>
+
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#moodle-navbar">

@@ -115,10 +115,20 @@ aside h2, aside h5{
   .head_img{
     height: 197px;
     background-color: #fff;
-    background-image: url([[pix:theme|headerIMG]]);
     background-repeat: no-repeat;
   }
-
+  .head_img.propio{
+    background-image: url([[pix:theme|headerIMG]]);
+  }
+  .head_img.propio a{
+    float: right;
+    height: 190px;
+    width: 350px;
+  }
+  .head_img.nopropio{
+    background-image: url([[pix:theme|headerIMG_nopropio]]);
+  }
+  
   .moodleheader{
     display: none;
   }

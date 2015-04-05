@@ -150,3 +150,34 @@ function theme_fvdia_page_init(moodle_page $page) {
 }
 
 
+function theme_fvdia_isUserCohortPropio($userid)
+{
+    # import objects
+    global $DB;
+    $isPropio = false;
+
+    $params['userid'] = $userid;
+    $sql =  "SELECT
+                cohm.cohortid as cohortid,
+                coh.name as cohortname,
+                coh.idnumber as cohortidnumber,
+                coh.description as cohortdescription,
+                coh.visible as cohortvisible
+                FROM {cohort_members} as cohm
+                JOIN {cohort} as coh ON cohm.cohortid = coh.id
+                WHERE cohm.userid = :userid 
+            "; 
+    $cohorts = $DB->get_records_sql($sql, $params);
+    # check if user is PROPIO
+    foreach($cohorts as $cohort)
+    {
+        if($cohort->cohortidnumber=='PROPIO')
+        {
+            $isPropio = true;
+            break;
+        }
+    } 
+    return $isPropio;
+}
+
+
