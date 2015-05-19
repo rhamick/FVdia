@@ -45,6 +45,9 @@ span.fa.fa-book:before{
 }	
 span.fa.fa-suitcase:before{
     content:"\f0f2";
+}
+span.fa.fa-briefcase:before{
+    content:"\f0b1";
 }	
 span.fa.fa-shopping-cart:before{
     content:"\f07a";
@@ -54,6 +57,9 @@ span.fa.fa-comments:before{
 }	
 span.fa.fa-question-circle:before{
     content:"\f059";
+}
+span.fa.fa-clock-o:before{
+    content:"\f017";
 }	
 
 
