@@ -26,3 +26,18 @@
 #fvd-catalogo-course-list .panel-level1 .btn{
 	margin-top: 15px;
 }
+
+/* awesome fonts */
+
+span.myicon {
+    font-family: FontAwesome;
+    font-size: 1em;
+}
+
+
+/* THEME HACKS ----------------------------------- */
+
+h5, .h5 {
+  font-size: 18px;
+}
+

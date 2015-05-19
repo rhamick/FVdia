@@ -28,6 +28,7 @@ $THEME->doctype = 'html5';
 $THEME->sheets = array(
 	                   'custom',
 	                   'fvd_custom_pages',
+	                   'font-awesome.min'
 	                   );
 $THEME->lessfile = 'fvdia';
 $THEME->parents_exclude_sheets = array('bootstrap' => array('moodle'));
