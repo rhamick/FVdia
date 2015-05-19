@@ -29,10 +29,35 @@
 
 /* awesome fonts */
 
-span.myicon {
+span.fa {
     font-family: FontAwesome;
     font-size: 1em;
 }
+
+span.fa.fa-graduation-cap:before{
+    content:"\f19d";
+}	
+span.fa.fa-folder-open:before{
+    content:"\f07c";
+}	
+span.fa.fa-book:before{
+    content:"\f02d";
+}	
+span.fa.fa-suitcase:before{
+    content:"\f0f2";
+}	
+span.fa.fa-shopping-cart:before{
+    content:"\f07a";
+}	
+span.fa.fa-comments:before{
+    content:"\f086";
+}	
+span.fa.fa-question-circle:before{
+    content:"\f059";
+}	
+
+
+
 
 
 /* THEME HACKS ----------------------------------- */
@@ -41,3 +66,7 @@ h5, .h5 {
   font-size: 18px;
 }
 
+.block_fvdiamenu.itemcard{
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+}
