@@ -16,6 +16,32 @@
   	display: inline-block;
 }
 
+#fvd-frontpage-content{
+  margin:30px;
+}
+
+#fvd-frontpage-history-course-list{
+  background-color: #fff;
+}
+
+#fvd-frontpage-history-course{
+  background-color: #efefef;
+}
+#fvd-frontpage-history-course-list h1,
+#fvd-catalogo-course-list h1,
+#fvd-frontpage-current-course-list h1{
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 10px;
+}
+
+ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li a{
+  background-color: #eee;  
+}
+ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li.active a{
+  background-color: #fff;  
+}
+
 
 /* Catalog page ----------------------------------- */
 
@@ -26,6 +52,21 @@
 #fvd-catalogo-course-list .panel-level1 .btn{
 	margin-top: 15px;
 }
+
+/* Generic */
+.margin-bottom-20{
+  margin-bottom:20px;
+}
+.margin-bottom-30{
+  margin-bottom:30px;
+}
+.margin-bottom-40{
+  margin-bottom:40px;
+}
+.margin-bottom-50{
+  margin-bottom:50px;
+}
+
 
 /* awesome fonts */
 
