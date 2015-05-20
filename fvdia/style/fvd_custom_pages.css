@@ -46,7 +46,7 @@ ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li.active a{
 /* Catalog page ----------------------------------- */
 
 #fvd-catalogo-course-list{
-	padding: 15px;
+	padding-top: 15px;
 }
 
 #fvd-catalogo-course-list .panel-level1 .btn{
@@ -116,4 +116,8 @@ h5, .h5 {
 .block_fvdiamenu.itemcard{
   margin-bottom: 5px;
   padding-bottom: 5px;
+}
+
+aside#block-region-side-pre.empty.block-region{
+  display: none;
 }
