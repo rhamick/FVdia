@@ -1,12 +1,42 @@
 /* Front page ------------------------------------- */
 
 #fvd-frontpage-summary{
-	margin:15px;
-	padding: 20px;
-	border-radius: 5px;	
+	padding: 30px;
+	border-radius: 5px;
 	background: #fff;
 }
 
+.btn-gotocourse{
+	border-color: #f8f8f8;
+  	background-color: #f8f8f8;
+  	background-image: none;
+	color: #bbb;
+}
+.btn-gotocourse:hover{
+	background-color: #fafafa;
+	color: #d6251d;
+}
+
+/*OPENED*/
+#fvd-frontpage-opened-course-list h1{
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 10px;
+}
+#fvd-frontpage-open-course{
+  background-color: #f8f8f8;
+}
+#fvd-frontpage-open-course .panel-heading{
+	min-height:60px;
+}
+#fvd-frontpage-open-course .panel-heading .panel-title{
+	display: inline-flex;
+}
+#fvd-frontpage-open-course .panel-heading .panel-title .fa{
+	margin-right: 10px;
+}
+
+/*HISTORY*/
 #fvd-frontpage-history-course-list{
 	margin-top: 15px;
 	padding: 15px;
@@ -15,33 +45,36 @@
 	min-width: 85px;
   	display: inline-block;
 }
-
-#fvd-frontpage-content{
-  margin:30px;
-}
-
 #fvd-frontpage-history-course-list{
   background-color: #fff;
 }
-
 #fvd-frontpage-history-course{
-  background-color: #efefef;
+  background-color: #f8f8f8;
 }
-#fvd-frontpage-history-course-list h1,
-#fvd-catalogo-course-list h1,
-#fvd-frontpage-current-course-list h1{
+#fvd-frontpage-history-course-list h1{
   margin-bottom: 40px;
   border-bottom: 1px solid #ededed;
   padding-bottom: 10px;
 }
 
+/*CATALOGO*/
+#fvd-catalogo-course-list h1{
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ededed;
+  padding-bottom: 10px;
+}
+#fvd-frontpage-content{
+  margin:30px;
+}
 ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li a{
-  background-color: #eee;  
+  background-color: #eee;
 }
 ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li.active a{
-  background-color: #fff;  
+  background-color: #fff;
 }
-
+.panel-category.panel-catalog > .panel-heading > h4{
+	color: #d6251d;
+}
 
 /* Catalog page ----------------------------------- */
 
@@ -77,31 +110,31 @@ span.fa {
 
 span.fa.fa-graduation-cap:before{
     content:"\f19d";
-}	
+}
 span.fa.fa-folder-open:before{
     content:"\f07c";
-}	
+}
 span.fa.fa-book:before{
     content:"\f02d";
-}	
+}
 span.fa.fa-suitcase:before{
     content:"\f0f2";
 }
 span.fa.fa-briefcase:before{
     content:"\f0b1";
-}	
+}
 span.fa.fa-shopping-cart:before{
     content:"\f07a";
-}	
+}
 span.fa.fa-comments:before{
     content:"\f086";
-}	
+}
 span.fa.fa-question-circle:before{
     content:"\f059";
 }
 span.fa.fa-clock-o:before{
     content:"\f017";
-}	
+}
 
 
 
