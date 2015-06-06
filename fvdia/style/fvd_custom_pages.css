@@ -5,6 +5,10 @@
 	border-radius: 5px;
 	background: #fff;
 }
+#fvd-frontpage-summary p{
+	border-bottom: none;
+	padding-bottom: 0 !important;
+}
 
 .btn-gotocourse{
 	border-color: #f8f8f8;
