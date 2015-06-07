@@ -9,6 +9,20 @@
 	border-bottom: none;
 	padding-bottom: 0 !important;
 }
+#fvd-frontpage-summary span i{
+	padding: 15px 10px;
+	color: #b92019;
+}
+#fvd-frontpage-summary span:hover i{
+	color: #999;
+}
+#fvd-frontpage-summary h4{
+  margin-left: 15px;
+  margin-top: 15px;
+}
+#fvd-frontpage-summary h4:hover{
+	color:#999;
+}
 
 .btn-gotocourse{
 	border-color: #f8f8f8;
@@ -92,8 +106,20 @@ ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li.active a{
 }
 .panel-category.panel-catalog > .panel-heading > h4{
 	color: #d6251d;
+	padding: 15px 15px 0;
 }
-
+.panel-category.panel-catalog > .panel-heading > h4.panel-title.underimage{
+	color: #d6251d;
+}
+.panel-catalog img{
+	border-radius: 4px 4px 0 0;
+}
+.panel-category-course h4.panel-title{
+	padding: 15px 15px 0 15px;
+}
+.panel-category-course h4.panel-title.panel-course{
+	padding: 0 15px 0 15px;
+}
 /* Catalog page ----------------------------------- */
 
 #fvd-catalogo-course-list{
@@ -103,7 +129,9 @@ ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li.active a{
 #fvd-catalogo-course-list .panel-level1 .btn{
 	margin-top: 15px;
 }
-
+#fvd-catalogo-course-list .panel-category.panel-catalog .panel-heading{
+	padding: 0 0 15px 0;
+}
 /* Generic */
 .margin-bottom-20{
   margin-bottom:20px;
