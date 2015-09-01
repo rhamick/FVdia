@@ -42,16 +42,16 @@ echo $OUTPUT->doctype() ?>
 
 <nav role="navigation" class="navbar navbar-default">
 
-
+    <?php $lnk2pap = '<a href="'.$CFG->wwwroot.'/apps/pap2/auth.php"></a>'; ?>
+    <!-- banner img set in bootswatch.css:125 -->
     <?php if(theme_fvdia_isUserCohortPropio($USER->id)): ?>
-        <div class="head_img propio">
-            <!-- banner img set in bootswatch.css -->
-            <a href="<?php echo $CFG->wwwroot; ?>/apps/pap2/auth.php"></a>
-        </div> 
+        <div class="head_img propiomd visible-md visible-lg"><?php echo $lnk2pap ?></div>
+        <div class="head_img propiosm visible-sm"><?php echo $lnk2pap ?></div>
+        <div class="head_img propioxs visible-xs"><?php echo $lnk2pap ?></div>
     <?php else: ?>
-        <div class="head_img nopropio">
-            <!-- banner img set in bootswatch.css -->
-        </div>     
+        <div class="head_img nopropiomd visible-md visible-lg"></div>
+        <div class="head_img nopropiosm visible-sm"></div>
+        <div class="head_img nopropioxs visible-xs"></div>
     <?php endif; ?>
 
     <div class="container-fluid">
@@ -122,7 +122,7 @@ echo $OUTPUT->doctype() ?>
         <div id="course-footer"><?php echo $OUTPUT->course_footer(); ?></div>
         <p class="helplink"><?php echo $OUTPUT->page_doc_link(); ?></p>
         <?php
-        echo $OUTPUT->login_info();      
+        echo $OUTPUT->login_info();
         #echo $OUTPUT->home_link();  // moodle logo
         ?>
 
@@ -131,7 +131,7 @@ echo $OUTPUT->doctype() ?>
                 <img src="<?php echo $CFG->wwwroot ?>/theme/fvdia/pix/logo_dia_white_xs.png" alt="Dia Logo">
             </a>
         </div>
-        
+
         <?php echo $OUTPUT->standard_footer_html(); ?>
     </footer>
 
