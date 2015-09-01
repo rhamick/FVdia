@@ -118,20 +118,24 @@ ul.nav.nav-tabs.nav-justified.nav-frontpagetabs li.active a{
 	padding: 15px 15px 0 15px;
 }
 .panel-category-course h4.panel-title.panel-course{
-	padding: 0 15px 0 15px;
+	padding: 15px 15px 0 15px;
 }
 /* Catalog page ----------------------------------- */
 
 #fvd-catalogo-course-list{
 	padding-top: 15px;
 }
-
+#fvd-catalogo-course-list .panel-heading{
+ 	padding: 0 0 15px 0;
+}
 #fvd-catalogo-course-list .panel-level1 .btn{
 	margin-top: 15px;
 }
-#fvd-catalogo-course-list .panel-category.panel-catalog .panel-heading{
+#fvd-catalogo-course-list .panel-category.panel-catalog{
 	padding: 0 0 15px 0;
+	margin-top: 25px;
 }
+
 /* Generic */
 .margin-bottom-20{
   margin-bottom:20px;
